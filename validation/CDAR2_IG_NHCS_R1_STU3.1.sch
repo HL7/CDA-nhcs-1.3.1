@@ -2892,7 +2892,7 @@ Schematron generated from Trifolia on 3/10/2022
       <sch:assert id="a-4521-21" test="not(cda:documentationOf) or cda:documentationOf[count(cda:serviceEvent)=1]">The documentationOf, if present, SHALL contain exactly one [1..1] serviceEvent (CONF:4521-21).</sch:assert>
       <sch:assert id="a-4521-24" test="count(cda:component)=1">SHALL contain exactly one [1..1] component (CONF:4521-24).</sch:assert>
       <sch:assert id="a-4521-4" test="cda:code[@code='75619-7']">This code SHALL contain exactly one [1..1] @code="75619-7" National healthcare survey panel NAMCS (CONF:4521-4).</sch:assert>
-      <sch:assert id="a-4521-1164" test="cda:recordTarget/cda:patientRole[count(cda:id)=1]">This patientRole SHALL contain exactly one [1..1] id (CONF:4521-1164).</sch:assert>
+      <sch:assert id="a-4521-1164" test="cda:recordTarget/cda:patientRole[count(cda:id)>0]">This patientRole SHALL contain at least one [1..*] id (CONF:4521-1164).</sch:assert>
       <sch:assert id="a-4521-198" test="cda:componentOf/cda:encompassingEncounter/cda:effectiveTime[count(cda:low)=1]">This effectiveTime SHALL contain exactly one [1..1] low (CONF:4521-198).</sch:assert>
       <sch:assert id="a-4521-1169" test="cda:componentOf/cda:encompassingEncounter/cda:effectiveTime[count(cda:high)=1]">This effectiveTime SHALL contain exactly one [1..1] high (CONF:4521-1169).</sch:assert>
       <sch:assert id="a-4521-25" test="cda:component[count(cda:structuredBody)=1]">This component SHALL contain exactly one [1..1] structuredBody (CONF:4521-25).</sch:assert>
@@ -2997,7 +2997,7 @@ Schematron generated from Trifolia on 3/10/2022
     </sch:rule>
     <sch:rule id="r-urn-hl7ii-2.16.840.1.113883.10.20.34.2.16-2022-01-01.3.1-errors" context="cda:section[cda:templateId[@root='2.16.840.1.113883.10.20.34.2.16' and @extension='2022-01-01.3.1']]">
       <sch:extends rule="r-urn-hl7ii-2.16.840.1.113883.10.20.34.2.16-2022-01-01.3.1-errors-abstract" />
-      <sch:assert id="a-4521-2277" test="count(cda:templateId[@root='2.16.840.1.113883.10.20.34.2.16'][@extension='2019-08-01'])=1">SHALL contain exactly one [1..1] templateId (CONF:4521-2277) such that it SHALL contain exactly one [1..1] @root="2.16.840.1.113883.10.20.34.2.16" (CONF:4521-2291). SHALL contain exactly one [1..1] @extension="2019-08-01" (CONF:4521-2292).</sch:assert>
+      <sch:assert id="a-4521-2277" test="count(cda:templateId[@root='2.16.840.1.113883.10.20.34.2.16'][@extension='2022-01-01.3.1'])=1">SHALL contain exactly one [1..1] templateId (CONF:4521-2277) such that it SHALL contain exactly one [1..1] @root="2.16.840.1.113883.10.20.34.2.16" (CONF:4521-2291). SHALL contain exactly one [1..1] @extension="2022-01-01.3.1" (CONF:4521-2292).</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern id="p-urn-oid-2.16.840.1.113883.10.20.15.3.1-warnings">
